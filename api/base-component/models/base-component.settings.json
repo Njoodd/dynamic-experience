@@ -1,0 +1,423 @@
+{
+  "kind": "collectionType",
+  "collectionName": "base_components",
+  "info": {
+    "name": "baseComponent",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true,
+    "privateAttributes": [
+      "published_at",
+      "created_at",
+      "updated_at"
+    ]
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "type": {
+      "type": "string",
+      "required": true,
+      "default": "null",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "name": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "visible": {
+      "type": "boolean",
+      "default": true,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "style": {
+      "model": "style"
+    },
+    "styleId": {
+      "type": "string",
+      "default": "null",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "text": {
+      "type": "string",
+      "default": "null",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "textAr": {
+      "type": "json",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "disabled": {
+      "type": "boolean",
+      "default": false,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "action": {
+      "model": "action"
+    },
+    "actionAr": {
+      "collection": "action"
+    },
+    "onClick": {
+      "collection": "action"
+    },
+    "disableArrow": {
+      "type": "boolean",
+      "default": false,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "placeholder": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "onChange": {
+      "type": "string",
+      "default": "null",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "min": {
+      "type": "integer",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "max": {
+      "type": "integer",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "inputType": {
+      "type": "enumeration",
+      "enum": [
+        "text",
+        "password",
+        "email",
+        "number"
+      ],
+      "default": "text",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "validation": {
+      "type": "string",
+      "default": "null",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "validationError": {
+      "type": "string",
+      "default": "null",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "src": {
+      "type": "string",
+      "default": "null",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "alt": {
+      "type": "string",
+      "default": "null",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "drawable": {
+      "type": "enumeration",
+      "enum": [
+        "rightArrow",
+        "frontArrow",
+        "backArrow",
+        "fastShipping",
+        "lighting",
+        "rollOver",
+        "null"
+      ],
+      "default": "null",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "url": {
+      "type": "string",
+      "default": "null",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "enableJavascript": {
+      "type": "boolean",
+      "default": false,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "allowRedirection": {
+      "type": "boolean",
+      "default": false,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "spacing": {
+      "type": "string",
+      "default": "20",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "direction": {
+      "type": "enumeration",
+      "enum": [
+        "horizontal",
+        "vertical",
+        "both"
+      ],
+      "default": "both",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "alignItems": {
+      "type": "enumeration",
+      "enum": [
+        "start",
+        "center",
+        "end"
+      ],
+      "default": "center",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "columns": {
+      "type": "integer",
+      "default": 3,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "rows": {
+      "type": "integer",
+      "default": 5,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "bound": {
+      "type": "boolean",
+      "default": false,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "value1": {
+      "type": "string",
+      "default": "null",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "value2": {
+      "type": "string",
+      "default": "null",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "conditionType": {
+      "type": "string",
+      "default": "null",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "onSuccess": {
+      "collection": "action"
+    },
+    "onFail": {
+      "collection": "action"
+    },
+    "searchVariableId": {
+      "type": "string",
+      "default": "null",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "autoCollapse": {
+      "type": "boolean",
+      "default": false,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "scrollable": {
+      "type": "boolean",
+      "default": false,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "breakLine": {
+      "type": "string",
+      "default": "null",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "autoSnap": {
+      "type": "boolean",
+      "default": true,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "scaleAnimation": {
+      "type": "boolean",
+      "default": false,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "centerProduct": {
+      "type": "boolean",
+      "default": false,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "value": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "titleComponent": {
+      "model": "child-component"
+    },
+    "components": {
+      "collection": "child-component"
+    },
+    "bottomComponent": {
+      "model": "child-component"
+    },
+    "successComponents": {
+      "collection": "child-component"
+    },
+    "failComponents": {
+      "collection": "child-component"
+    },
+    "componentsList": {
+      "collection": "expandable-item"
+    }
+  }
+}

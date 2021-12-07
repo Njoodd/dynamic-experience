@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "expandable_items",
+  "info": {
+    "name": "expandableItem",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true,
+    "privateAttributes": [
+      "published_at",
+      "created_at",
+      "updated_at"
+    ]
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "titleComponent": {
+      "model": "child-component"
+    },
+    "bodyComponent": {
+      "model": "child-component"
+    }
+  }
+}

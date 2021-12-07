@@ -1,0 +1,51 @@
+{
+  "kind": "collectionType",
+  "collectionName": "bodies",
+  "info": {
+    "name": "body",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true,
+    "privateAttributes": [
+      "published_at",
+      "created_at",
+      "updated_at"
+    ]
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "baseComponents": {
+      "collection": "base-component"
+    },
+    "style": {
+      "model": "style"
+    },
+    "styleId": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "spacing": {
+      "type": "string",
+      "default": "20",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "bottom": {
+      "model": "base-component"
+    }
+  }
+}

@@ -1,0 +1,281 @@
+const { isDraft } = require('strapi-utils').contentTypes;
+
+module.exports = {
+
+    async create(data, { files } = {}) {
+        const validData = await strapi.entityValidator.validateEntityCreation(
+            strapi.models.application,
+            data,
+            { isDraft: isDraft(data, strapi.models.application) }
+        );
+
+        const entry = await strapi.query('application').create(validData);
+
+        if (files) {
+            // automatically uploads the files based on the entry and the model
+            await strapi.entityService.uploadFiles(entry, files, {
+                model: 'application',
+                // if you are using a plugin's model you will have to add the `source` key (source: 'users-permissions')
+            });
+            return this.findOne({ id: entry.id });
+        }
+
+        return entry;
+    },
+
+    async update(params, data, { files } = {}) {
+        const existingEntry = await strapi.query('application').findOne(params);
+
+        const validData = await strapi.entityValidator.validateEntityUpdate(
+            strapi.models.application,
+            data,
+            { isDraft: isDraft(existingEntry, strapi.models.application) }
+        );
+
+        const entry = await strapi.query('application').update(params, validData);
+
+        if (files) {
+            // automatically uploads the files based on the entry and the model
+            await strapi.entityService.uploadFiles(entry, files, {
+                model: 'application',
+                // if you are using a plugin's model you will have to add the `source` key (source: 'users-permissions')
+            });
+            return this.findOne({ id: entry.id });
+        }
+
+        return entry;
+    },
+
+    find(params, populate) {
+
+        // const result = await strapi.query('application').model((qb) => {
+        //     qb.where('parent_id', !null)
+        // })
+        //     .fetchAll()
+        return strapi.query('application').find(params, [
+            'data',
+            'config',
+            'themes',
+            'pages',
+            'pages.titleBar',
+            'pages.titleBar.style', ,
+            'pages.titleBar.baseComponents',
+            'pages.titleBar.baseComponents.action',
+            'pages.titleBar.baseComponents.actionAr',
+            'pages.titleBar.baseComponents.onClick',
+            'pages.titleBar.baseComponents.onSuccess',
+            'pages.titleBar.baseComponents.onFail',
+            'pages.titleBar.baseComponents.titleComponent',
+            'pages.titleBar.baseComponents.titleComponent.style',
+            'pages.titleBar.baseComponents.titleComponent.action',
+            'pages.titleBar.baseComponents.titleComponent.actionAr',
+            'pages.titleBar.baseComponents.titleComponent.onClick',
+            'pages.titleBar.baseComponents.components',
+            'pages.titleBar.baseComponents.components.style',
+            'pages.titleBar.baseComponents.components.action',
+            'pages.titleBar.baseComponents.components.actionAr',
+            'pages.titleBar.baseComponents.components.onClick',
+            'pages.titleBar.baseComponents.bottomComponents',
+            'pages.titleBar.baseComponents.bottomComponents.style',
+            'pages.titleBar.baseComponents.bottomComponents.action',
+            'pages.titleBar.baseComponents.bottomComponents.actionAr',
+            'pages.titleBar.baseComponents.bottomComponents.onClick',
+            'pages.titleBar.baseComponents.successComponents',
+            'pages.titleBar.baseComponents.successComponents.style',
+            'pages.titleBar.baseComponents.successComponents.action',
+            'pages.titleBar.baseComponents.successComponents.actionAr',
+            'pages.titleBar.baseComponents.successComponents.onClick',
+            'pages.titleBar.baseComponents.failComponents',
+            'pages.titleBar.baseComponents.failComponents.style',
+            'pages.titleBar.baseComponents.failComponents.action',
+            'pages.titleBar.baseComponents.failComponents.actionAr',
+            'pages.titleBar.baseComponents.failComponents.onClick',
+            'pages.titleBar.baseComponents.componentsList',
+            'pages.titleBar.baseComponents.componentsList.titleComponent',
+            'pages.titleBar.baseComponents.componentsList.titleComponent.style',
+            'pages.titleBar.baseComponents.componentsList.titleComponent.action',
+            'pages.titleBar.baseComponents.componentsList.titleComponent.actionAr',
+            'pages.titleBar.baseComponents.componentsList.titleComponent.onClick',
+            'pages.titleBar.baseComponents.componentsList.bodyComponent',
+            'pages.titleBar.baseComponents.componentsList.bodyComponent.style',
+            'pages.titleBar.baseComponents.componentsList.bodyComponent.action',
+            'pages.titleBar.baseComponents.componentsList.bodyComponent.actionAr',
+            'pages.titleBar.baseComponents.componentsList.bodyComponent.onClick',
+            'pages.body',
+            'pages.body.style',
+            'pages.body.baseComponents',
+            'pages.body.baseComponents.action',
+            'pages.body.baseComponents.actionAr',
+            'pages.body.baseComponents.onClick',
+            'pages.body.baseComponents.onSuccess',
+            'pages.body.baseComponents.onFail',
+            'pages.body.baseComponents.titleComponent',
+            'pages.body.baseComponents.titleComponent.style',
+            'pages.body.baseComponents.titleComponent.action',
+            'pages.body.baseComponents.titleComponent.actionAr',
+            'pages.body.baseComponents.titleComponent.onClick',
+            'pages.body.baseComponents.components',
+            'pages.body.baseComponents.components.style',
+            'pages.body.baseComponents.components.action',
+            'pages.body.baseComponents.components.actionAr',
+            'pages.body.baseComponents.components.onClick',
+            'pages.body.baseComponents.bottomComponents',
+            'pages.body.baseComponents.bottomComponents.style',
+            'pages.body.baseComponents.bottomComponents.action',
+            'pages.body.baseComponents.bottomComponents.actionAr',
+            'pages.body.baseComponents.bottomComponents.onClick',
+            'pages.body.baseComponents.successComponents',
+            'pages.body.baseComponents.successComponents.style',
+            'pages.body.baseComponents.successComponents.action',
+            'pages.body.baseComponents.successComponents.actionAr',
+            'pages.body.baseComponents.successComponents.onClick',
+            'pages.body.baseComponents.failComponents',
+            'pages.body.baseComponents.failComponents.style',
+            'pages.body.baseComponents.failComponents.action',
+            'pages.body.baseComponents.failComponents.actionAr',
+            'pages.body.baseComponents.failComponents.onClick',
+            'pages.body.baseComponents.componentsList',
+            'pages.body.baseComponents.componentsList.titleComponent',
+            'pages.body.baseComponents.componentsList.titleComponent.style',
+            'pages.body.baseComponents.componentsList.titleComponent.action',
+            'pages.body.baseComponents.componentsList.titleComponent.actionAr',
+            'pages.body.baseComponents.componentsList.titleComponent.onClick',
+            'pages.body.baseComponents.componentsList.bodyComponent',
+            'pages.body.baseComponents.componentsList.bodyComponent.style',
+            'pages.body.baseComponents.componentsList.bodyComponent.action',
+            'pages.body.baseComponents.componentsList.bodyComponent.actionAr',
+            'pages.body.baseComponents.componentsList.bodyComponent.onClick',
+            'pages.body.bottom',
+            'pages.body.bottom.action',
+            'pages.body.bottom.actionAr',
+            'pages.body.bottom.onClick',
+            'pages.body.bottom.onSuccess',
+            'pages.body.bottom.onFail',
+            'pages.body.bottom.titleComponent',
+            'pages.body.bottom.components',
+            'pages.body.bottom.bottomComponents',
+            'pages.body.bottom.successComponents',
+            'pages.body.bottom.failComponents',
+            'pages.body.bottom.componentsList',
+            'pages.bottom',
+            'pages.bottom.style',
+            'pages.bottom.items',
+            'pages.bottom.items.action',
+
+        ]);
+    },
+
+    findOne(params, populate) {
+        return strapi.query('application').findOne(params, [
+            'data',
+            'config',
+            'themes',
+            'pages',
+            'pages.titleBar',
+            'pages.titleBar.style', ,
+            'pages.titleBar.baseComponents',
+            'pages.titleBar.baseComponents.action',
+            'pages.titleBar.baseComponents.actionAr',
+            'pages.titleBar.baseComponents.onClick',
+            'pages.titleBar.baseComponents.onSuccess',
+            'pages.titleBar.baseComponents.onFail',
+            'pages.titleBar.baseComponents.titleComponent',
+            'pages.titleBar.baseComponents.titleComponent.style',
+            'pages.titleBar.baseComponents.titleComponent.action',
+            'pages.titleBar.baseComponents.titleComponent.actionAr',
+            'pages.titleBar.baseComponents.titleComponent.onClick',
+            'pages.titleBar.baseComponents.components',
+            'pages.titleBar.baseComponents.components.style',
+            'pages.titleBar.baseComponents.components.action',
+            'pages.titleBar.baseComponents.components.actionAr',
+            'pages.titleBar.baseComponents.components.onClick',
+            'pages.titleBar.baseComponents.bottomComponents',
+            'pages.titleBar.baseComponents.bottomComponents.style',
+            'pages.titleBar.baseComponents.bottomComponents.action',
+            'pages.titleBar.baseComponents.bottomComponents.actionAr',
+            'pages.titleBar.baseComponents.bottomComponents.onClick',
+            'pages.titleBar.baseComponents.successComponents',
+            'pages.titleBar.baseComponents.successComponents.style',
+            'pages.titleBar.baseComponents.successComponents.action',
+            'pages.titleBar.baseComponents.successComponents.actionAr',
+            'pages.titleBar.baseComponents.successComponents.onClick',
+            'pages.titleBar.baseComponents.failComponents',
+            'pages.titleBar.baseComponents.failComponents.style',
+            'pages.titleBar.baseComponents.failComponents.action',
+            'pages.titleBar.baseComponents.failComponents.actionAr',
+            'pages.titleBar.baseComponents.failComponents.onClick',
+            'pages.titleBar.baseComponents.componentsList',
+            'pages.titleBar.baseComponents.componentsList.titleComponent',
+            'pages.titleBar.baseComponents.componentsList.titleComponent.style',
+            'pages.titleBar.baseComponents.componentsList.titleComponent.action',
+            'pages.titleBar.baseComponents.componentsList.titleComponent.actionAr',
+            'pages.titleBar.baseComponents.componentsList.titleComponent.onClick',
+            'pages.titleBar.baseComponents.componentsList.bodyComponent',
+            'pages.titleBar.baseComponents.componentsList.bodyComponent.style',
+            'pages.titleBar.baseComponents.componentsList.bodyComponent.action',
+            'pages.titleBar.baseComponents.componentsList.bodyComponent.actionAr',
+            'pages.titleBar.baseComponents.componentsList.bodyComponent.onClick',
+            'pages.body',
+            'pages.body.style',
+            'pages.body.baseComponents', 
+            'pages.body.baseComponents.action',
+            'pages.body.baseComponents.actionAr',
+            'pages.body.baseComponents.onClick',
+            'pages.body.baseComponents.onSuccess',
+            'pages.body.baseComponents.onFail',
+            'pages.body.baseComponents.titleComponent',
+            'pages.body.baseComponents.titleComponent.style',
+            'pages.body.baseComponents.titleComponent.action',
+            'pages.body.baseComponents.titleComponent.actionAr',
+            'pages.body.baseComponents.titleComponent.onClick',
+            'pages.body.baseComponents.components',
+            'pages.body.baseComponents.components.style',
+            'pages.body.baseComponents.components.action',
+            'pages.body.baseComponents.components.actionAr',
+            'pages.body.baseComponents.components.onClick',
+            'pages.body.baseComponents.bottomComponents',
+            'pages.body.baseComponents.bottomComponents.style',
+            'pages.body.baseComponents.bottomComponents.action',
+            'pages.body.baseComponents.bottomComponents.actionAr',
+            'pages.body.baseComponents.bottomComponents.onClick',
+            'pages.body.baseComponents.successComponents',
+            'pages.body.baseComponents.successComponents.style',
+            'pages.body.baseComponents.successComponents.action',
+            'pages.body.baseComponents.successComponents.actionAr',
+            'pages.body.baseComponents.successComponents.onClick',
+            'pages.body.baseComponents.failComponents',
+            'pages.body.baseComponents.failComponents.style',
+            'pages.body.baseComponents.failComponents.action',
+            'pages.body.baseComponents.failComponents.actionAr',
+            'pages.body.baseComponents.failComponents.onClick',
+            'pages.body.baseComponents.componentsList',
+            'pages.body.baseComponents.componentsList.titleComponent',
+            'pages.body.baseComponents.componentsList.titleComponent.style',
+            'pages.body.baseComponents.componentsList.titleComponent.action',
+            'pages.body.baseComponents.componentsList.titleComponent.actionAr',
+            'pages.body.baseComponents.componentsList.titleComponent.onClick',
+            'pages.body.baseComponents.componentsList.bodyComponent',
+            'pages.body.baseComponents.componentsList.bodyComponent.style',
+            'pages.body.baseComponents.componentsList.bodyComponent.action',
+            'pages.body.baseComponents.componentsList.bodyComponent.actionAr',
+            'pages.body.baseComponents.componentsList.bodyComponent.onClick',
+            'pages.body.bottom',
+            'pages.body.bottom.action',
+            'pages.body.bottom.actionAr',
+            'pages.body.bottom.onClick',
+            'pages.body.bottom.onSuccess',
+            'pages.body.bottom.onFail',
+            'pages.body.bottom.titleComponent',
+            'pages.body.bottom.components',
+            'pages.body.bottom.bottomComponents',
+            'pages.body.bottom.successComponents',
+            'pages.body.bottom.failComponents',
+            'pages.body.bottom.componentsList',
+            'pages.bottom',
+            'pages.bottom.style',
+            'pages.bottom.items',
+            'pages.bottom.items.action',
+        ]);
+
+    },
+};

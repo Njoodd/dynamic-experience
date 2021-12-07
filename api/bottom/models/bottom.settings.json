@@ -1,0 +1,40 @@
+{
+  "kind": "collectionType",
+  "collectionName": "bottoms",
+  "info": {
+    "name": "bottom",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true,
+    "privateAttributes": [
+      "published_at",
+      "created_at",
+      "updated_at"
+    ]
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "items": {
+      "collection": "item"
+    },
+    "style": {
+      "model": "style"
+    },
+    "styleId": {
+      "type": "string",
+      "default": "null",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    }
+  }
+}

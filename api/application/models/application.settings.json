@@ -1,0 +1,59 @@
+{
+  "kind": "collectionType",
+  "collectionName": "applications",
+  "info": {
+    "name": "application",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true,
+    "privateAttributes": [
+      "published_at",
+      "created_at",
+      "updated_at"
+    ]
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "lang": {
+      "type": "enumeration",
+      "enum": [
+        "EN",
+        "AR"
+      ],
+      "default": "EN",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "data": {
+      "collection": "variable"
+    },
+    "config": {
+      "model": "configuration"
+    },
+    "themes": {
+      "collection": "theme"
+    },
+    "pages": {
+      "collection": "page"
+    },
+    "version": {
+      "type": "string",
+      "unique": true,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    }
+  }
+}

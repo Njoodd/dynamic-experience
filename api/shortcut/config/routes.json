@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/shortcuts",
+      "handler": "shortcut.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/shortcuts/count",
+      "handler": "shortcut.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/shortcuts/:id",
+      "handler": "shortcut.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/shortcuts",
+      "handler": "shortcut.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/shortcuts/:id",
+      "handler": "shortcut.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/shortcuts/:id",
+      "handler": "shortcut.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

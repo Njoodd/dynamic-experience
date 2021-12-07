@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/titlebars",
+      "handler": "titlebar.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/titlebars/count",
+      "handler": "titlebar.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/titlebars/:id",
+      "handler": "titlebar.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/titlebars",
+      "handler": "titlebar.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/titlebars/:id",
+      "handler": "titlebar.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/titlebars/:id",
+      "handler": "titlebar.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

@@ -1,0 +1,91 @@
+{
+  "kind": "collectionType",
+  "collectionName": "configurations",
+  "info": {
+    "name": "configuration",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true,
+    "privateAttributes": [
+      "published_at",
+      "created_at",
+      "updated_at"
+    ]
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "displayMode": {
+      "type": "enumeration",
+      "enum": [
+        "dark",
+        "light",
+        "followSystem"
+      ],
+      "default": "light",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "preserverLastLocation": {
+      "type": "enumeration",
+      "enum": [
+        "true",
+        "false"
+      ],
+      "default": "true",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "hideComponentWhileLoading": {
+      "type": "enumeration",
+      "enum": [
+        "true",
+        "false"
+      ],
+      "default": "true",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "mainPage": {
+      "type": "string",
+      "default": "main",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "updateOn": {
+      "type": "enumeration",
+      "enum": [
+        "realTime",
+        "resume",
+        "start"
+      ],
+      "default": "realTime",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "shortcuts": {
+      "collection": "shortcut"
+    }
+  }
+}
