@@ -2,49 +2,49 @@ const { isDraft } = require('strapi-utils').contentTypes;
 
 module.exports = {
 
-    async create(data, { files } = {}) {
-        const validData = await strapi.entityValidator.validateEntityCreation(
-            strapi.models.application,
-            data,
-            { isDraft: isDraft(data, strapi.models.application) }
-        );
+    // async create(data, { files } = {}) {
+    //     const validData = await strapi.entityValidator.validateEntityCreation(
+    //         strapi.models.application,
+    //         data,
+    //         { isDraft: isDraft(data, strapi.models.application) }
+    //     );
 
-        const entry = await strapi.query('application').create(validData);
+    //     const entry = await strapi.query('application').create(validData);
 
-        if (files) {
-            // automatically uploads the files based on the entry and the model
-            await strapi.entityService.uploadFiles(entry, files, {
-                model: 'application',
-                // if you are using a plugin's model you will have to add the `source` key (source: 'users-permissions')
-            });
-            return this.findOne({ id: entry.id });
-        }
+    //     if (files) {
+    //         // automatically uploads the files based on the entry and the model
+    //         await strapi.entityService.uploadFiles(entry, files, {
+    //             model: 'application',
+    //             // if you are using a plugin's model you will have to add the `source` key (source: 'users-permissions')
+    //         });
+    //         return this.findOne({ id: entry.id });
+    //     }
 
-        return entry;
-    },
+    //     return entry;
+    // },
 
-    async update(params, data, { files } = {}) {
-        const existingEntry = await strapi.query('application').findOne(params);
+    // async update(params, data, { files } = {}) {
+    //     const existingEntry = await strapi.query('application').findOne(params);
 
-        const validData = await strapi.entityValidator.validateEntityUpdate(
-            strapi.models.application,
-            data,
-            { isDraft: isDraft(existingEntry, strapi.models.application) }
-        );
+    //     const validData = await strapi.entityValidator.validateEntityUpdate(
+    //         strapi.models.application,
+    //         data,
+    //         { isDraft: isDraft(existingEntry, strapi.models.application) }
+    //     );
 
-        const entry = await strapi.query('application').update(params, validData);
+    //     const entry = await strapi.query('application').update(params, validData);
 
-        if (files) {
-            // automatically uploads the files based on the entry and the model
-            await strapi.entityService.uploadFiles(entry, files, {
-                model: 'application',
-                // if you are using a plugin's model you will have to add the `source` key (source: 'users-permissions')
-            });
-            return this.findOne({ id: entry.id });
-        }
+    //     if (files) {
+    //         // automatically uploads the files based on the entry and the model
+    //         await strapi.entityService.uploadFiles(entry, files, {
+    //             model: 'application',
+    //             // if you are using a plugin's model you will have to add the `source` key (source: 'users-permissions')
+    //         });
+    //         return this.findOne({ id: entry.id });
+    //     }
 
-        return entry;
-    },
+    //     return entry;
+    // },
 
     find(params, populate) {
 
@@ -161,7 +161,6 @@ module.exports = {
             'pages.bottom.style',
             'pages.bottom.items',
             'pages.bottom.items.action',
-
         ]);
     },
 

@@ -8,42 +8,42 @@
 
 module.exports = {
 
-    async create(ctx) {
-        let entity;
-        if (ctx.is("multipart")) {
-            const { data, files } = parseMultipartData(ctx);
-            entity = await strapi.services.application.create(data, { files });
-        } else {
-            entity = await strapi.services.application.create(ctx.request.body);
-        }
-        strapi.StrapIO.emit(this, "create", entity);
+    // async create(ctx) {
+    //     let entity;
+    //     if (ctx.is("multipart")) {
+    //         const { data, files } = parseMultipartData(ctx);
+    //         entity = await strapi.services.application.create(data, { files });
+    //     } else {
+    //         entity = await strapi.services.application.create(ctx.request.body);
+    //     }
+    //     strapi.StrapIO.emit(this, "create", entity);
 
-        // or send custom event
-        // strapi.StrapIO.emitRaw("myroom", "myevent", entity);
+    //     // or send custom event
+    //     // strapi.StrapIO.emitRaw("myroom", "myevent", entity);
 
-        return sanitizeEntity(entity, { model: strapi.models.application });
-    },
+    //     return sanitizeEntity(entity, { model: strapi.models.application });
+    // },
 
-    async update(ctx) {
-        const { id } = ctx.params;
+    // async update(ctx) {
+    //     const { id } = ctx.params;
 
-        let entity;
-        if (ctx.is("multipart")) {
-            const { data, files } = parseMultipartData(ctx);
-            entity = await strapi.services.application.update({ id }, data, {
-                files,
-            });
-        } else {
-            entity = await strapi.services.application.update(
-                { id },
-                ctx.request.body
-            );
-        }
+    //     let entity;
+    //     if (ctx.is("multipart")) {
+    //         const { data, files } = parseMultipartData(ctx);
+    //         entity = await strapi.services.application.update({ id }, data, {
+    //             files,
+    //         });
+    //     } else {
+    //         entity = await strapi.services.application.update(
+    //             { id },
+    //             ctx.request.body
+    //         );
+    //     }
 
-        strapi.StrapIO.emit(this, "update", entity);
+    //     strapi.StrapIO.emit(this, "update", entity);
 
-        return sanitizeEntity(entity, { model: strapi.models.application });
-    },
+    //     return sanitizeEntity(entity, { model: strapi.models.application });
+    // },
 
     async find(ctx) {
         let entities;
