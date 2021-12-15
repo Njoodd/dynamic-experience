@@ -46,6 +46,9 @@
     },
     "bottom": {
       "model": "base-component"
+    },
+    "components": {
+      "collection": "base-component"
     }
   }
 }

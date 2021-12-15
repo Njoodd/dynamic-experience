@@ -401,23 +401,23 @@
         }
       }
     },
-    "titleComponent": {
-      "model": "child-component"
-    },
     "components": {
-      "collection": "child-component"
+      "collection": "base-component"
+    },
+    "titleComponent": {
+      "model": "base-component"
     },
     "bottomComponent": {
-      "model": "child-component"
-    },
-    "successComponents": {
-      "collection": "child-component"
-    },
-    "failComponents": {
-      "collection": "child-component"
+      "model": "base-component"
     },
     "componentsList": {
-      "collection": "expandable-item"
+      "collection": "base-component"
+    },
+    "successComponents": {
+      "collection": "base-component"
+    },
+    "failComponents": {
+      "collection": "base-component"
     }
   }
 }

@@ -20,12 +20,5 @@
       "localized": true
     }
   },
-  "attributes": {
-    "titleComponent": {
-      "model": "child-component"
-    },
-    "bodyComponent": {
-      "model": "child-component"
-    }
-  }
+  "attributes": {}
 }

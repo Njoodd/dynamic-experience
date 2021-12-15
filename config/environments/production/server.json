@@ -1,0 +1,9 @@
+{
+  "host": "0.0.0.0",
+  "port": "1337",
+  "admin": {
+    "auth": {
+      "secret": "8169ddccceeffb177584f04528cbeff7"
+        }
+    }
+}
