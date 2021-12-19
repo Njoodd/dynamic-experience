@@ -29,9 +29,6 @@
         }
       }
     },
-    "baseComponents": {
-      "collection": "base-component"
-    },
     "style": {
       "model": "style"
     },
@@ -51,6 +48,9 @@
           "localized": true
         }
       }
+    },
+    "components": {
+      "collection": "base-component"
     }
   }
 }
