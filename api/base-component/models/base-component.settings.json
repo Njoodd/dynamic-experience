@@ -410,14 +410,14 @@
     "bottomComponent": {
       "model": "base-component"
     },
-    "componentsList": {
-      "collection": "base-component"
-    },
     "successComponents": {
       "collection": "base-component"
     },
     "failComponents": {
       "collection": "base-component"
+    },
+    "componentsList": {
+      "collection": "expandable-item"
     }
   }
 }
