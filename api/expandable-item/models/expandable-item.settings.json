@@ -20,5 +20,12 @@
       "localized": true
     }
   },
-  "attributes": {}
+  "attributes": {
+    "titleComponent": {
+      "model": "base-component"
+    },
+    "bodyComponent": {
+      "model": "base-component"
+    }
+  }
 }

@@ -35,19 +35,6 @@
         }
       }
     },
-    "preserverLastLocation": {
-      "type": "enumeration",
-      "enum": [
-        "true",
-        "false"
-      ],
-      "default": "true",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      }
-    },
     "hideComponentWhileLoading": {
       "type": "enumeration",
       "enum": [
@@ -86,6 +73,15 @@
     },
     "shortcuts": {
       "collection": "shortcut"
+    },
+    "preserveLastLocation": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "boolean",
+      "default": true
     }
   }
 }
