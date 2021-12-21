@@ -417,6 +417,17 @@
         }
       },
       "type": "text"
+    },
+    "api": {
+      "model": "api-call"
+    },
+    "apiListPath": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "string"
     }
   }
 }

@@ -1,0 +1,36 @@
+{
+  "kind": "collectionType",
+  "collectionName": "api_calls",
+  "info": {
+    "name": "APICall"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "url": {
+      "type": "string"
+    },
+    "method": {
+      "type": "enumeration",
+      "enum": [
+        "GET",
+        "POST",
+        "FORM"
+      ],
+      "default": "GET"
+    },
+    "authorization": {
+      "model": "authorization"
+    },
+    "header": {
+      "type": "json"
+    },
+    "body": {
+      "type": "json"
+    }
+  }
+}
