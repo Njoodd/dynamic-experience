@@ -55,7 +55,6 @@ module.exports = {
         return strapi.query('application').find(params, [
 
             // ComponentsList > titleComponent - bodyComponent > components > components > ...
-            
             'data',
             'config.shortcuts',
             'themes',
@@ -86,6 +85,7 @@ module.exports = {
             'pages.titleBar.components.onClick.onFail',
             'pages.titleBar.components.onSuccess.onFail',
             'pages.titleBar.components.onFail.onFail',
+            'pages.titleBar.components.api.authorization',
             // branch: titleBar
             // level #1.1.1
             'pages.titleBar.components.components.style.padding',
@@ -108,6 +108,7 @@ module.exports = {
             'pages.titleBar.components.components.onClick.onFail',
             'pages.titleBar.components.components.onSuccess.onFail',
             'pages.titleBar.components.components.onFail.onFail',
+            'pages.titleBar.components.components.api.authorization',
             // branch: titleBar
             // level #1.1.1.1
             'pages.titleBar.components.components.components.style.padding',
@@ -130,6 +131,7 @@ module.exports = {
             'pages.titleBar.components.components.components.onClick.onFail',
             'pages.titleBar.components.components.components.onSuccess.onFail',
             'pages.titleBar.components.components.components.onFail.onFail',
+            'pages.titleBar.components.components.components.api.authorization',
             // branch: titleBar
             // level #1.1.1.1.1
             'pages.titleBar.components.components.components.components.style.padding',
@@ -152,6 +154,7 @@ module.exports = {
             'pages.titleBar.components.components.components.components.onClick.onFail',
             'pages.titleBar.components.components.components.components.onSuccess.onFail',
             'pages.titleBar.components.components.components.components.onFail.onFail',
+            'pages.titleBar.components.components.components.components.api.authorization',
             // branch: titleBar
             // level #1.1.1.1.1.1
             'pages.titleBar.components.components.components.components.components.style.padding',
@@ -174,7 +177,8 @@ module.exports = {
             'pages.titleBar.components.components.components.components.components.onClick.onFail',
             'pages.titleBar.components.components.components.components.components.onSuccess.onFail',
             'pages.titleBar.components.components.components.components.components.onFail.onFail',
-            
+            'pages.titleBar.components.components.components.components.components.api.authorization',
+
             // branch: body
             // level #2
             'pages.body.style.padding', 'pages.body.style.margin',
@@ -200,6 +204,7 @@ module.exports = {
             'pages.body.components.onClick.onFail',
             'pages.body.components.onSuccess.onFail',
             'pages.body.components.onFail.onFail',
+            'pages.body.components.api.authorization',
             // branch: body > components > titleComponent
             // level #2.1.1
             'pages.body.components.titleComponent.style.padding',
@@ -222,6 +227,8 @@ module.exports = {
             'pages.body.components.titleComponent.onClick.onFail',
             'pages.body.components.titleComponent.onSuccess.onFail',
             'pages.body.components.titleComponent.onFail.onFail',
+            'pages.body.components.titleComponent.api.authorization',
+
             // branch: components
             // level #2.1.1
             'pages.body.components.titleComponent.components.style.padding',
@@ -244,6 +251,7 @@ module.exports = {
             'pages.body.components.titleComponent.components.onClick.onFail',
             'pages.body.components.titleComponent.components.onSuccess.onFail',
             'pages.body.components.titleComponent.components.onFail.onFail',
+            'pages.body.components.titleComponent.components.api.authorization',
             // branch: titleComponent
             // level #2.1.3.1
             'pages.body.components.titleComponent.components.components.style.padding',
@@ -266,6 +274,8 @@ module.exports = {
             'pages.body.components.titleComponent.components.components.onClick.onFail',
             'pages.body.components.titleComponent.components.components.onSuccess.onFail',
             'pages.body.components.titleComponent.components.components.onFail.onFail',
+            'pages.body.components.titleComponent.components.components.api.authorization',
+
             // branch: titleComponent
             // level #2.1.3.1.1
             'pages.body.components.titleComponent.components.components.components.style.padding',
@@ -289,6 +299,7 @@ module.exports = {
             'pages.body.components.titleComponent.components.components.components.onSuccess.onFail',
             'pages.body.components.titleComponent.components.components.components.onFail.onFail',
             'pages.body.components.titleComponent.components.components.components.components',
+            'pages.body.components.titleComponent.components.components.components.api.authorization',
             // branch: body > components > bottomComponent
             // level #2.2.2
             'pages.body.components.bottomComponent.style.padding',
@@ -309,6 +320,7 @@ module.exports = {
             'pages.body.components.bottomComponent.onSuccess.onSuccess',
             'pages.body.components.bottomComponent.onFail.onSuccess',
             'pages.body.components.bottomComponent.onClick.onFail',
+            'pages.body.components.bottomComponent.api.authorization',
             // branch: components
             // level #2.2.3
             'pages.body.components.bottomComponent.components.style.padding',
@@ -329,6 +341,7 @@ module.exports = {
             'pages.body.components.bottomComponent.components.onSuccess.onSuccess',
             'pages.body.components.bottomComponent.components.onFail.onSuccess',
             'pages.body.components.bottomComponent.components.onClick.onFail',
+            'pages.body.components.bottomComponent.components.api.authorization',
             // branch: components
             // level #2.2.3.3
             'pages.body.components.bottomComponent.components.components.style.padding',
@@ -349,6 +362,8 @@ module.exports = {
             'pages.body.components.bottomComponent.components.components.onSuccess.onSuccess',
             'pages.body.components.bottomComponent.components.components.onFail.onSuccess',
             'pages.body.components.bottomComponent.components.components.onClick.onFail',
+            'pages.body.components.bottomComponent.components.components.api.authorization',
+
             // branch: components
             // level #2.2.3.3.3
             'pages.body.components.bottomComponent.components.components.components.style.padding',
@@ -370,6 +385,8 @@ module.exports = {
             'pages.body.components.bottomComponent.components.components.components.onFail.onSuccess',
             'pages.body.components.bottomComponent.components.components.components.onClick.onFail',
             'pages.body.components.bottomComponent.components.components.components.components',
+            'pages.body.components.bottomComponent.components.components.components.api.authorization',
+
             // branch: bottom > components > components
             // level #2.3
             'pages.body.components.components.style.padding',
@@ -392,6 +409,7 @@ module.exports = {
             'pages.body.components.components.onClick.onFail',
             'pages.body.components.components.onSuccess.onFail',
             'pages.body.components.components.onFail.onFail',
+            'pages.body.components.components.api.authorization',
             // branch: titleComponent
             // level #2.3.1
             'pages.body.components.components.titleComponent.style.padding',
@@ -414,6 +432,8 @@ module.exports = {
             'pages.body.components.components.titleComponent.onClick.onFail',
             'pages.body.components.components.titleComponent.onSuccess.onFail',
             'pages.body.components.components.titleComponent.onFail.onFail',
+            'pages.body.components.components.titleComponent.api.authorization',
+
             // branch: components
             // level #2.3.1.3
             'pages.body.components.components.titleComponent.components.style.padding',
@@ -436,6 +456,7 @@ module.exports = {
             'pages.body.components.components.titleComponent.components.onClick.onFail',
             'pages.body.components.components.titleComponent.components.onSuccess.onFail',
             'pages.body.components.components.titleComponent.components.onFail.onFail',
+            'pages.body.components.components.titleComponent.components.api.authorization',
             // branch: components
             // level #2.3.1.3.3
             'pages.body.components.components.titleComponent.components.components.style.padding',
@@ -459,7 +480,7 @@ module.exports = {
             'pages.body.components.components.titleComponent.components.components.onSuccess.onFail',
             'pages.body.components.components.titleComponent.components.components.onFail.onFail',
             'pages.body.components.components.titleComponent.components.components.components',
-       
+            'pages.body.components.components.titleComponent.components.components.api.authorization',
             // branch: bottomComponent
             // level #2.3.2
             'pages.body.components.components.bottomComponent.style.padding',
@@ -482,6 +503,7 @@ module.exports = {
             'pages.body.components.components.bottomComponent.onClick.onFail',
             'pages.body.components.components.bottomComponent.onSuccess.onFail',
             'pages.body.components.components.bottomComponent.onFail.onFail',
+            'pages.body.components.components.bottomComponent.api.authorization',
             // branch: components
             // level #2.3.2.3
             'pages.body.components.components.bottomComponent.components.style.padding',
@@ -504,6 +526,7 @@ module.exports = {
             'pages.body.components.components.bottomComponent.components.onClick.onFail',
             'pages.body.components.components.bottomComponent.components.onSuccess.onFail',
             'pages.body.components.components.bottomComponent.components.onFail.onFail',
+            'pages.body.components.components.bottomComponent.components.api.authorization',
             // branch: components
             // level #2.3.2.3.3
             'pages.body.components.components.bottomComponent.components.components.style.padding',
@@ -527,6 +550,7 @@ module.exports = {
             'pages.body.components.components.bottomComponent.components.components.onSuccess.onFail',
             'pages.body.components.components.bottomComponent.components.components.onFail.onFail',
             'pages.body.components.components.bottomComponent.components.components.components',
+            'pages.body.components.components.bottomComponent.components.components.api.authorization',
             // branch: components
             // level #2.3.3
             'pages.body.components.components.components.style.padding',
@@ -549,6 +573,7 @@ module.exports = {
             'pages.body.components.components.components.onClick.onFail',
             'pages.body.components.components.components.onSuccess.onFail',
             'pages.body.components.components.components.onFail.onFail',
+            'pages.body.components.components.components.api.authorization',
             // branch: titleComponent
             // level #2.3.3.1
             'pages.body.components.components.components.titleComponent.style.padding',
@@ -571,6 +596,8 @@ module.exports = {
             'pages.body.components.components.components.titleComponent.onClick.onFail',
             'pages.body.components.components.components.titleComponent.onSuccess.onFail',
             'pages.body.components.components.components.titleComponent.onFail.onFail',
+            'pages.body.components.components.components.titleComponent.api.authorization',
+
             // branch: components
             // level #2.3.3.1.3
             'pages.body.components.components.components.titleComponent.components.style.padding',
@@ -594,6 +621,7 @@ module.exports = {
             'pages.body.components.components.components.titleComponent.components.onSuccess.onFail',
             'pages.body.components.components.components.titleComponent.components.onFail.onFail',
             'pages.body.components.components.components.titleComponent.components.components',
+            'pages.body.components.components.components.titleComponent.components.api.authorization',
             // branch: bottomComponent
             // level #2.3.3.2
             'pages.body.components.components.components.bottomComponent.style.padding',
@@ -617,6 +645,7 @@ module.exports = {
             'pages.body.components.components.components.bottomComponent.onClick.onFail',
             'pages.body.components.components.components.bottomComponent.onSuccess.onFail',
             'pages.body.components.components.components.bottomComponent.onFail.onFail',
+            'pages.body.components.components.components.bottomComponent.api.authorization',
             // branch: components
             // level #2.3.3.2.3
             'pages.body.components.components.components.bottomComponent.components.style.padding',
@@ -640,6 +669,7 @@ module.exports = {
             'pages.body.components.components.components.bottomComponent.components.onSuccess.onFail',
             'pages.body.components.components.components.bottomComponent.components.onFail.onFail',
             'pages.body.components.components.components.bottomComponent.components.components',
+            'pages.body.components.components.components.bottomComponent.components.api.authorization',
             // branch: components
             // level #2.3.3.3
             'pages.body.components.components.components.components.style.padding',
@@ -662,6 +692,7 @@ module.exports = {
             'pages.body.components.components.components.components.onClick.onFail',
             'pages.body.components.components.components.components.onSuccess.onFail',
             'pages.body.components.components.components.components.onFail.onFail',
+            'pages.body.components.components.components.components.api.authorization',
             // branch: titleComponent
             // level #2.3.3.3.1
             'pages.body.components.components.components.components.titleComponent.style.padding',
@@ -685,6 +716,8 @@ module.exports = {
             'pages.body.components.components.components.components.titleComponent.onSuccess.onFail',
             'pages.body.components.components.components.components.titleComponent.onFail.onFail',
             'pages.body.components.components.components.components.titleComponent.components',
+            'pages.body.components.components.components.components.titleComponent.api.authorization',
+
             // branch: bottomComponent
             // level #2.3.3.3.2
             'pages.body.components.components.components.components.bottomComponent.style.padding',
@@ -708,6 +741,8 @@ module.exports = {
             'pages.body.components.components.components.components.bottomComponent.onSuccess.onFail',
             'pages.body.components.components.components.components.bottomComponent.onFail.onFail',
             'pages.body.components.components.components.components.bottomComponent.components',
+            'pages.body.components.components.components.components.bottomComponent.api.authorization',
+
             // branch: components
             // level #2.3.3.3.3
             'pages.body.components.components.components.components.components.style.padding',
@@ -736,6 +771,8 @@ module.exports = {
             'pages.body.components.components.components.components.components.componentsList.bodyComponent',
             'pages.body.components.components.components.components.components.successComponents',
             'pages.body.components.components.components.components.components.failComponents',
+            'pages.body.components.components.components.components.components.api.authorization',
+
 
             'pages.body.components.components.components.components.components.components.style.padding',
             'pages.body.components.components.components.components.components.components.style.margin',
@@ -763,6 +800,8 @@ module.exports = {
             'pages.body.components.components.components.components.components.components.componentsList.bodyComponent',
             'pages.body.components.components.components.components.components.components.successComponents',
             'pages.body.components.components.components.components.components.components.failComponents',
+            'pages.body.components.components.components.components.components.components.api.authorization',
+
 
             'pages.body.components.components.components.components.components.components.components.style.padding',
             'pages.body.components.components.components.components.components.components.components.style.margin',
@@ -790,6 +829,7 @@ module.exports = {
             'pages.body.components.components.components.components.components.components.components.componentsList.bodyComponent',
             'pages.body.components.components.components.components.components.components.components.successComponents',
             'pages.body.components.components.components.components.components.components.components.failComponents',
+            'pages.body.components.components.components.components.components.components.components.api.authorization',
 
             'pages.body.components.components.components.components.components.components.components.components.style.padding',
             'pages.body.components.components.components.components.components.components.components.components.style.margin',
@@ -817,6 +857,7 @@ module.exports = {
             'pages.body.components.components.components.components.components.components.components.components.componentsList.bodyComponent',
             'pages.body.components.components.components.components.components.components.components.components.successComponents',
             'pages.body.components.components.components.components.components.components.components.components.failComponents',
+            'pages.body.components.components.components.components.components.components.components.components.api.authorization',
 
             // branch: componentsList
             // level #2.3.3.3.4
@@ -841,6 +882,9 @@ module.exports = {
             'pages.body.components.components.components.components.componentsList.titleComponent.onSuccess.onFail',
             'pages.body.components.components.components.components.componentsList.titleComponent.onFail.onFail',
             'pages.body.components.components.components.components.componentsList.titleComponent.components',
+            'pages.body.components.components.components.components.componentsList.titleComponent.api.authorization',
+
+
             'pages.body.components.components.components.components.componentsList.bodyComponent.style.padding',
             'pages.body.components.components.components.components.componentsList.bodyComponent.style.margin',
             'pages.body.components.components.components.components.componentsList.bodyComponent.onClick.style.padding',
@@ -862,6 +906,8 @@ module.exports = {
             'pages.body.components.components.components.components.componentsList.bodyComponent.onSuccess.onFail',
             'pages.body.components.components.components.components.componentsList.bodyComponent.onFail.onFail',
             'pages.body.components.components.components.components.componentsList.bodyComponent.components',
+            'pages.body.components.components.components.components.componentsList.bodyComponent.api.authorization',
+
             // branch: successComponents
             // level #2.3.3.3.5
             'pages.body.components.components.components.components.successComponents.style.padding',
@@ -885,6 +931,8 @@ module.exports = {
             'pages.body.components.components.components.components.successComponents.onSuccess.onFail',
             'pages.body.components.components.components.components.successComponents.onFail.onFail',
             'pages.body.components.components.components.components.successComponents.components',
+            'pages.body.components.components.components.components.successComponents.api.authorization',
+
             // branch: failComponents
             // level #2.3.3.3.6
             'pages.body.components.components.components.components.failComponents.style.padding',
@@ -908,6 +956,8 @@ module.exports = {
             'pages.body.components.components.components.components.failComponents.onSuccess.onFail',
             'pages.body.components.components.components.components.failComponents.onFail.onFail',
             'pages.body.components.components.components.components.failComponents.components',
+            'pages.body.components.components.components.components.failComponents.api.authorization',
+
             // branch: componentsList
             // level #2.3.3.4
             'pages.body.components.components.components.componentsList.titleComponent.style.padding',
@@ -931,6 +981,8 @@ module.exports = {
             'pages.body.components.components.components.componentsList.titleComponent.onSuccess.onFail',
             'pages.body.components.components.components.componentsList.titleComponent.onFail.onFail',
             'pages.body.components.components.components.componentsList.titleComponent.components',
+            'pages.body.components.components.components.componentsList.titleComponent.api.authorization',
+
             'pages.body.components.components.components.componentsList.bodyComponent.style.padding',
             'pages.body.components.components.components.componentsList.bodyComponent.style.margin',
             'pages.body.components.components.components.componentsList.bodyComponent.onClick.style.padding',
@@ -952,6 +1004,8 @@ module.exports = {
             'pages.body.components.components.components.componentsList.bodyComponent.onSuccess.onFail',
             'pages.body.components.components.components.componentsList.bodyComponent.onFail.onFail',
             'pages.body.components.components.components.componentsList.bodyComponent.components',
+            'pages.body.components.components.components.componentsList.bodyComponent.api.authorization',
+
             // branch: successComponents
             // level #2.3.3.5
             'pages.body.components.components.components.successComponents.style.padding',
@@ -974,6 +1028,8 @@ module.exports = {
             'pages.body.components.components.components.successComponents.onClick.onFail',
             'pages.body.components.components.components.successComponents.onSuccess.onFail',
             'pages.body.components.components.components.successComponents.onFail.onFail',
+            'pages.body.components.components.components.successComponents.api.authorization',
+
             // branch: components
             // level #2.3.3.5.3
             'pages.body.components.components.components.successComponents.components.style.padding',
@@ -997,6 +1053,7 @@ module.exports = {
             'pages.body.components.components.components.successComponents.components.onSuccess.onFail',
             'pages.body.components.components.components.successComponents.components.onFail.onFail',
             'pages.body.components.components.components.successComponents.components.components',
+            'pages.body.components.components.components.successComponents.components.api.authorization',
             // branch: failComponents
             // level #2.3.3.6
             'pages.body.components.components.components.failComponents.style.padding',
@@ -1019,6 +1076,8 @@ module.exports = {
             'pages.body.components.components.components.failComponents.onClick.onFail',
             'pages.body.components.components.components.failComponents.onSuccess.onFail',
             'pages.body.components.components.components.failComponents.onFail.onFail',
+            'pages.body.components.components.components.failComponents.api.authorization',
+
             // branch: failComponents
             // level #2.3.3.6
             'pages.body.components.components.components.failComponents.components.style.margin',
@@ -1041,6 +1100,8 @@ module.exports = {
             'pages.body.components.components.components.failComponents.components.onClick.onFail',
             'pages.body.components.components.components.failComponents.components.onSuccess.onFail',
             'pages.body.components.components.components.failComponents.components.onFail.onFail',
+            'pages.body.components.components.components.failComponents.components.api.authorization',
+
             // branch: componentsList
             // level #2.3.4
             'pages.body.components.components.componentsList.titleComponent.style.padding',
@@ -1064,6 +1125,7 @@ module.exports = {
             'pages.body.components.components.componentsList.titleComponent.onSuccess.onFail',
             'pages.body.components.components.componentsList.titleComponent.onFail.onFail',
             'pages.body.components.components.componentsList.titleComponent.components',
+            'pages.body.components.components.componentsList.titleComponent.api.authorization',
 
             'pages.body.components.components.componentsList.bodyComponent.style.padding',
             'pages.body.components.components.componentsList.bodyComponent.style.margin',
@@ -1086,6 +1148,8 @@ module.exports = {
             'pages.body.components.components.componentsList.bodyComponent.onSuccess.onFail',
             'pages.body.components.components.componentsList.bodyComponent.onFail.onFail',
             'pages.body.components.components.componentsList.bodyComponent.components',
+            'pages.body.components.components.componentsList.bodyComponent.api.authorization',
+
             // branch: successComponents
             // level #2.3.5
             'pages.body.components.components.successComponents.style.padding',
@@ -1108,6 +1172,8 @@ module.exports = {
             'pages.body.components.components.successComponents.onClick.onFail',
             'pages.body.components.components.successComponents.onSuccess.onFail',
             'pages.body.components.components.successComponents.onFail.onFail',
+            'pages.body.components.components.successComponents.api.authorization',
+
             // branch: components
             // level #2.3.5.3
             'pages.body.components.components.successComponents.components.style.padding',
@@ -1130,6 +1196,8 @@ module.exports = {
             'pages.body.components.components.successComponents.components.onClick.onFail',
             'pages.body.components.components.successComponents.components.onSuccess.onFail',
             'pages.body.components.components.successComponents.components.onFail.onFail',
+            'pages.body.components.components.successComponents.components.api.authorization',
+
             // branch: components
             // level #2.3.5.3.3
             'pages.body.components.components.successComponents.components.components.style.padding',
@@ -1153,6 +1221,8 @@ module.exports = {
             'pages.body.components.components.successComponents.components.components.onSuccess.onFail',
             'pages.body.components.components.successComponents.components.components.onFail.onFail',
             'pages.body.components.components.successComponents.components.components.components',
+            'pages.body.components.components.successComponents.components.components.api.authorization',
+
             // branch: failComponents
             // level #2.3.6
             'pages.body.components.components.failComponents.style.padding',
@@ -1175,6 +1245,8 @@ module.exports = {
             'pages.body.components.components.failComponents.onClick.onFail',
             'pages.body.components.components.failComponents.onSuccess.onFail',
             'pages.body.components.components.failComponents.onFail.onFail',
+            'pages.body.components.components.failComponents.api.authorization',
+
             // branch: components
             // level #2.3.6.3
             'pages.body.components.components.failComponents.components.style.padding',
@@ -1197,6 +1269,8 @@ module.exports = {
             'pages.body.components.components.failComponents.components.onClick.onFail',
             'pages.body.components.components.failComponents.components.onSuccess.onFail',
             'pages.body.components.components.failComponents.components.onFail.onFail',
+            'pages.body.components.components.failComponents.components.api.authorization',
+
             // branch: components
             // level #2.3.6.3.3
             'pages.body.components.components.failComponents.components.components.style.padding',
@@ -1220,6 +1294,7 @@ module.exports = {
             'pages.body.components.components.failComponents.components.components.onSuccess.onFail',
             'pages.body.components.components.failComponents.components.components.onFail.onFail',
             'pages.body.components.components.failComponents.components.components.components',
+            'pages.body.components.components.failComponents.components.components.api.authorization',
 
             // branch: componentsList
             // level #2.3.4
@@ -1244,6 +1319,8 @@ module.exports = {
             'pages.body.components.componentsList.titleComponent.onSuccess.onFail',
             'pages.body.components.componentsList.titleComponent.onFail.onFail',
             'pages.body.components.componentsList.titleComponent.components.onFail',
+            'pages.body.components.componentsList.titleComponent.api.authorization',
+
             'pages.body.components.componentsList.bodyComponent.style.padding',
             'pages.body.components.componentsList.bodyComponent.style.margin',
             'pages.body.components.componentsList.bodyComponent.onClick.style.padding',
@@ -1265,6 +1342,7 @@ module.exports = {
             'pages.body.components.componentsList.bodyComponent.onSuccess.onFail',
             'pages.body.components.componentsList.bodyComponent.onFail.onFail',
             'pages.body.components.componentsList.bodyComponent.components',
+            'pages.body.components.componentsList.bodyComponent.api.authorization',
 
             // branch: bottom > components > successComponents
             // level #2.5
@@ -1288,6 +1366,8 @@ module.exports = {
             'pages.body.components.successComponents.onClick.onFail',
             'pages.body.components.successComponents.onSuccess.onFail',
             'pages.body.components.successComponents.onFail.onFail',
+            'pages.body.components.successComponents.api.authorization',
+
             // branch: components
             // level #2.5.3
             'pages.body.components.successComponents.components.style.padding',
@@ -1310,6 +1390,8 @@ module.exports = {
             'pages.body.components.successComponents.components.onClick.onFail',
             'pages.body.components.successComponents.components.onSuccess.onFail',
             'pages.body.components.successComponents.components.onFail.onFail',
+            'pages.body.components.successComponents.components.api.authorization',
+
             // branch: components
             // level #2.5.3.3
             'pages.body.components.successComponents.components.components.style.padding',
@@ -1332,6 +1414,8 @@ module.exports = {
             'pages.body.components.successComponents.components.components.onClick.onFail',
             'pages.body.components.successComponents.components.components.onSuccess.onFail',
             'pages.body.components.successComponents.components.components.onFail.onFail',
+            'pages.body.components.successComponents.components.components.api.authorization',
+
             // branch: components
             // level #2.5.3.3.3
             'pages.body.components.successComponents.components.components.components.style.padding',
@@ -1354,7 +1438,8 @@ module.exports = {
             'pages.body.components.successComponents.components.components.components.onClick.onFail',
             'pages.body.components.successComponents.components.components.components.onSuccess.onFail',
             'pages.body.components.successComponents.components.components.components.onFail.onFail',
-    
+            'pages.body.components.successComponents.components.components.components.api.authorization',
+
 
             'pages.body.components.successComponents.components.components.components.components.style.padding',
             'pages.body.components.successComponents.components.components.components.components.style.margin',
@@ -1376,6 +1461,8 @@ module.exports = {
             'pages.body.components.successComponents.components.components.components.components.onClick.onFail',
             'pages.body.components.successComponents.components.components.components.components.onSuccess.onFail',
             'pages.body.components.successComponents.components.components.components.components.onFail.onFail',
+            'pages.body.components.successComponents.components.components.components.components.api.authorization',
+
 
             'pages.body.components.successComponents.components.components.components.components.components.style.padding',
             'pages.body.components.successComponents.components.components.components.components.components.style.margin',
@@ -1397,6 +1484,8 @@ module.exports = {
             'pages.body.components.successComponents.components.components.components.components.components.onClick.onFail',
             'pages.body.components.successComponents.components.components.components.components.components.onSuccess.onFail',
             'pages.body.components.successComponents.components.components.components.components.components.onFail.onFail',
+            'pages.body.components.successComponents.components.components.components.components.components.api.authorization',
+
 
             'pages.body.components.successComponents.components.components.components.components.components.components.style.padding',
             'pages.body.components.successComponents.components.components.components.components.components.components.style.margin',
@@ -1418,6 +1507,7 @@ module.exports = {
             'pages.body.components.successComponents.components.components.components.components.components.components.onClick.onFail',
             'pages.body.components.successComponents.components.components.components.components.components.components.onSuccess.onFail',
             'pages.body.components.successComponents.components.components.components.components.components.components.onFail.onFail',
+            'pages.body.components.successComponents.components.components.components.components.components.components.api.authorization',
 
 
             // branch: bottom > components > failComponents
@@ -1442,6 +1532,8 @@ module.exports = {
             'pages.body.components.failComponents.onClick.onFail',
             'pages.body.components.failComponents.onSuccess.onFail',
             'pages.body.components.failComponents.onFail.onFail',
+            'pages.body.components.failComponents.api.authorization',
+
             // branch: components
             // level #2.6.3
             'pages.body.components.failComponents.components.style.padding',
@@ -1449,6 +1541,8 @@ module.exports = {
             'pages.body.components.failComponents.components.onClick',
             'pages.body.components.failComponents.components.onSuccess',
             'pages.body.components.failComponents.components.onFail',
+            'pages.body.components.failComponents.components.api.authorization',
+
             // branch: components
             // level #2.6.3.3
             'pages.body.components.failComponents.components.components.style.padding',
@@ -1471,6 +1565,8 @@ module.exports = {
             'pages.body.components.failComponents.components.components.onClick.onFail',
             'pages.body.components.failComponents.components.components.onSuccess.onFail',
             'pages.body.components.failComponents.components.components.onFail.onFail',
+            'pages.body.components.failComponents.components.components.api.authorization',
+
             // branch: components
             // level #2.6.3.3.3
             'pages.body.components.failComponents.components.components.components.style.padding',
@@ -1494,9 +1590,81 @@ module.exports = {
             'pages.body.components.failComponents.components.components.components.onSuccess.onFail',
             'pages.body.components.failComponents.components.components.components.onFail.onFail',
             'pages.body.components.failComponents.components.components.components.components',
+            'pages.body.components.failComponents.components.components.components.api.authorization',
 
-                // branch: body > bottom
-                // level #2.2
+            'pages.body.components.failComponents.components.components.components.components.style.padding',
+            'pages.body.components.failComponents.components.components.components.components.style.margin',
+            'pages.body.components.failComponents.components.components.components.components.onClick.style.padding',
+            'pages.body.components.failComponents.components.components.components.components.onSuccess.style.padding',
+            'pages.body.components.failComponents.components.components.components.components.onFail.style.padding',
+            'pages.body.components.failComponents.components.components.components.components.onClick.style.margin',
+            'pages.body.components.failComponents.components.components.components.components.onSuccess.style.margin',
+            'pages.body.components.failComponents.components.components.components.components.onFail.style.margin',
+            'pages.body.components.failComponents.components.components.components.components.onClick.component',
+            'pages.body.components.failComponents.components.components.components.components.onSuccess.component',
+            'pages.body.components.failComponents.components.components.components.components.onFail.component',
+            'pages.body.components.failComponents.components.components.components.components.onClick.authorization',
+            'pages.body.components.failComponents.components.components.components.components.onSuccess.authorization',
+            'pages.body.components.failComponents.components.components.components.components.onFail.authorization',
+            'pages.body.components.failComponents.components.components.components.components.onClick.onSuccess',
+            'pages.body.components.failComponents.components.components.components.components.onSuccess.onSuccess',
+            'pages.body.components.failComponents.components.components.components.components.onFail.onSuccess',
+            'pages.body.components.failComponents.components.components.components.components.onClick.onFail',
+            'pages.body.components.failComponents.components.components.components.components.onSuccess.onFail',
+            'pages.body.components.failComponents.components.components.components.components.onFail.onFail',
+            'pages.body.components.failComponents.components.components.components.components.components',
+            'pages.body.components.failComponents.components.components.components.components.api.authorization',
+
+            'pages.body.components.failComponents.components.components.components.components.components.style.padding',
+            'pages.body.components.failComponents.components.components.components.components.components.style.margin',
+            'pages.body.components.failComponents.components.components.components.components.components.onClick.style.padding',
+            'pages.body.components.failComponents.components.components.components.components.components.onSuccess.style.padding',
+            'pages.body.components.failComponents.components.components.components.components.components.onFail.style.padding',
+            'pages.body.components.failComponents.components.components.components.components.components.onClick.style.margin',
+            'pages.body.components.failComponents.components.components.components.components.components.onSuccess.style.margin',
+            'pages.body.components.failComponents.components.components.components.components.components.onFail.style.margin',
+            'pages.body.components.failComponents.components.components.components.components.components.onClick.component',
+            'pages.body.components.failComponents.components.components.components.components.components.onSuccess.component',
+            'pages.body.components.failComponents.components.components.components.components.components.onFail.component',
+            'pages.body.components.failComponents.components.components.components.components.components.onClick.authorization',
+            'pages.body.components.failComponents.components.components.components.components.components.onSuccess.authorization',
+            'pages.body.components.failComponents.components.components.components.components.components.onFail.authorization',
+            'pages.body.components.failComponents.components.components.components.components.components.onClick.onSuccess',
+            'pages.body.components.failComponents.components.components.components.components.components.onSuccess.onSuccess',
+            'pages.body.components.failComponents.components.components.components.components.components.onFail.onSuccess',
+            'pages.body.components.failComponents.components.components.components.components.components.onClick.onFail',
+            'pages.body.components.failComponents.components.components.components.components.components.onSuccess.onFail',
+            'pages.body.components.failComponents.components.components.components.components.components.onFail.onFail',
+            'pages.body.components.failComponents.components.components.components.components.components.components',
+            'pages.body.components.failComponents.components.components.components.components.components.api.authorization',
+
+            'pages.body.components.failComponents.components.components.components.components.components.components.style.padding',
+            'pages.body.components.failComponents.components.components.components.components.components.components.style.margin',
+            'pages.body.components.failComponents.components.components.components.components.components.components.onClick.style.padding',
+            'pages.body.components.failComponents.components.components.components.components.components.components.onSuccess.style.padding',
+            'pages.body.components.failComponents.components.components.components.components.components.components.onFail.style.padding',
+            'pages.body.components.failComponents.components.components.components.components.components.components.onClick.style.margin',
+            'pages.body.components.failComponents.components.components.components.components.components.components.onSuccess.style.margin',
+            'pages.body.components.failComponents.components.components.components.components.components.components.onFail.style.margin',
+            'pages.body.components.failComponents.components.components.components.components.components.components.onClick.component',
+            'pages.body.components.failComponents.components.components.components.components.components.components.onSuccess.component',
+            'pages.body.components.failComponents.components.components.components.components.components.components.onFail.component',
+            'pages.body.components.failComponents.components.components.components.components.components.components.onClick.authorization',
+            'pages.body.components.failComponents.components.components.components.components.components.components.onSuccess.authorization',
+            'pages.body.components.failComponents.components.components.components.components.components.components.onFail.authorization',
+            'pages.body.components.failComponents.components.components.components.components.components.components.onClick.onSuccess',
+            'pages.body.components.failComponents.components.components.components.components.components.components.onSuccess.onSuccess',
+            'pages.body.components.failComponents.components.components.components.components.components.components.onFail.onSuccess',
+            'pages.body.components.failComponents.components.components.components.components.components.components.onClick.onFail',
+            'pages.body.components.failComponents.components.components.components.components.components.components.onSuccess.onFail',
+            'pages.body.components.failComponents.components.components.components.components.components.components.onFail.onFail',
+            'pages.body.components.failComponents.components.components.components.components.components.components.components',
+            'pages.body.components.failComponents.components.components.components.components.components.components.api.authorization',
+
+
+
+            // branch: body > bottom
+            // level #2.2
             'pages.body.bottom.style.padding',
             'pages.body.bottom.style.margin',
             'pages.body.bottom.onClick.style.padding',
@@ -1517,6 +1685,7 @@ module.exports = {
             'pages.body.bottom.onClick.onFail',
             'pages.body.bottom.onSuccess.onFail',
             'pages.body.bottom.onFail.onFail',
+            'pages.body.bottom.api.authorization',
             // branch: body > bottom > components
             // level #2.2
             'pages.body.bottom.components.style.padding',
@@ -1539,6 +1708,8 @@ module.exports = {
             'pages.body.bottom.components.onClick.onFail',
             'pages.body.bottom.components.onSuccess.onFail',
             'pages.body.bottom.components.onFail.onFail',
+            'pages.body.bottom.components.api.authorization',
+
             // branch: components
             // level #2.2.3
             'pages.body.bottom.components.components.style.padding',
@@ -1559,7 +1730,8 @@ module.exports = {
             'pages.body.bottom.components.components.onSuccess.onSuccess',
             'pages.body.bottom.components.components.onFail.onSuccess',
             'pages.body.bottom.components.components.onSuccess.onFail',
-            'pages.body.bottom.components.components.components.onFail.onFail',
+            'pages.body.bottom.components.components.onFail.onFail',
+            'pages.body.bottom.components.components.api.authorization',
             // branch: components
             // level #2.2.3.3
             'pages.body.bottom.components.components.components.style.padding',
@@ -1582,6 +1754,8 @@ module.exports = {
             'pages.body.bottom.components.components.components.onClick.onFail',
             'pages.body.bottom.components.components.components.onSuccess.onFail',
             'pages.body.bottom.components.components.components.onFail.onFail',
+            'pages.body.bottom.components.components.components.api.authorization',
+
             // branch: components
             // level #2.2.3.3.3
             'pages.body.bottom.components.components.components.components.style.padding',
@@ -1606,6 +1780,7 @@ module.exports = {
             'pages.body.bottom.components.components.components.components.onClick.onFail',
             'pages.body.bottom.components.components.components.components.onSuccess.onFail',
             'pages.body.bottom.components.components.components.components.onFail.onFail',
+            'pages.body.bottom.components.components.components.components.api.authorization',
 
             // branch: bottom
             // level #1
