@@ -51,6 +51,15 @@
     },
     "components": {
       "collection": "base-component"
+    },
+    "floating": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "boolean",
+      "default": false
     }
   }
 }

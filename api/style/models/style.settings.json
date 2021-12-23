@@ -124,6 +124,14 @@
           "localized": true
         }
       }
+    },
+    "blur": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "float"
     }
   }
 }

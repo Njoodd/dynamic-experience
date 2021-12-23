@@ -21,16 +21,6 @@
     }
   },
   "attributes": {
-    "type": {
-      "type": "string",
-      "required": true,
-      "default": "null",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      }
-    },
     "name": {
       "type": "string",
       "pluginOptions": {
@@ -188,6 +178,10 @@
         "fastShipping",
         "lighting",
         "rollOver",
+        "wifi",
+        "phone",
+        "help",
+        "email",
         "null"
       ],
       "default": "null",
@@ -254,7 +248,6 @@
         "center",
         "end"
       ],
-      "default": "center",
       "pluginOptions": {
         "i18n": {
           "localized": true
@@ -428,6 +421,32 @@
         }
       },
       "type": "string"
+    },
+    "type": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "enumeration",
+      "enum": [
+        "Label",
+        "Hyperlink",
+        "Button",
+        "TextInput",
+        "SwitchInput",
+        "Image",
+        "WebView",
+        "Space",
+        "Card",
+        "Container",
+        "Grid",
+        "Condition",
+        "ExpandableList",
+        "HorizontalList",
+        "VerticalList",
+        "ProductsList"
+      ]
     }
   }
 }
