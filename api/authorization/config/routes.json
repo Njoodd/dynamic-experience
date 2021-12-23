@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/authorizations",
+      "handler": "authorization.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/authorizations/count",
+      "handler": "authorization.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/authorizations/:id",
+      "handler": "authorization.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/authorizations",
+      "handler": "authorization.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/authorizations/:id",
+      "handler": "authorization.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/authorizations/:id",
+      "handler": "authorization.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

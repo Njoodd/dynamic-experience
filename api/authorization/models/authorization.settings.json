@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "authorizations",
+  "info": {
+    "name": "Authorization"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "authType": {
+      "type": "string"
+    },
+    "token": {
+      "type": "string"
+    },
+    "username": {
+      "type": "string"
+    },
+    "password": {
+      "type": "string"
+    }
+  }
+}
