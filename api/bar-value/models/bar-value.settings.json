@@ -1,0 +1,21 @@
+{
+  "kind": "collectionType",
+  "collectionName": "bar_values",
+  "info": {
+    "name": "BarValue"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "text": {
+      "type": "string"
+    },
+    "value": {
+      "type": "decimal"
+    }
+  }
+}

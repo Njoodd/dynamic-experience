@@ -21,15 +21,6 @@
     }
   },
   "attributes": {
-    "actionType": {
-      "type": "string",
-      "required": true,
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      }
-    },
     "style": {
       "model": "style"
     },
@@ -57,8 +48,8 @@
       },
       "type": "string"
     },
-    "components": {
-      "collection": "base-component"
+    "component": {
+      "model": "base-component"
     },
     "url": {
       "pluginOptions": {
@@ -142,6 +133,72 @@
         }
       },
       "type": "string"
+    },
+    "value1": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "string"
+    },
+    "value2": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "string"
+    },
+    "conditionType": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "string"
+    },
+    "actionType": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "enumeration",
+      "enum": [
+        "Navigation",
+        "Message",
+        "URL",
+        "Variable",
+        "ApiCall",
+        "Alert",
+        "Language",
+        "Condition"
+      ],
+      "required": true
+    },
+    "actionId": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "string",
+      "private": true
+    },
+    "method": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "enumeration",
+      "enum": [
+        "GET",
+        "POST",
+        "FORM"
+      ],
+      "default": "GET"
     }
   }
 }

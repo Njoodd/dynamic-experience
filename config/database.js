@@ -1,19 +1,19 @@
 module.exports = ({ env }) => ({
-  defaultConnection: 'default',
+  defaultConnection: "default",
   connections: {
     default: {
-      connector: 'bookshelf',
+      connector: "bookshelf",
       settings: {
-        client: 'mysql',
-        host: env('DATABASE_HOST', 'mysql'),
-        port: env.int('DATABASE_PORT', 3306),
-        database: env('DATABASE_NAME', 'strapi'),
-        username: env('DATABASE_USERNAME', 'strapi'),
-        password: env('DATABASE_PASSWORD', 'strapi'),
-        ssl: env.bool('DATABASE_SSL', false),
-        charset: 'utf8mb4'
+        client: "mysql",
+        host: env("DATABASE_HOST", "127.0.0.1"),
+        port: env.int("DATABASE_PORT", 3306),
+        database: env("DATABASE_NAME", "strapi"),
+        username: env("DATABASE_USERNAME", "strapi"),
+        password: env("DATABASE_PASSWORD", "strapi"),
+        ssl: env.bool("DATABASE_SSL", false),
+        charset: "utf8mb4",
       },
-      options: {}
+      options: {},
     },
   },
 });
