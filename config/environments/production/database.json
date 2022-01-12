@@ -10,7 +10,8 @@
         "database": "strapi",
         "username": "strapi",
         "password": "strapi",
-        "ssl": false
+        "ssl": false,
+        "charset":"utf8mb4"
             },
       "options": {}
         }

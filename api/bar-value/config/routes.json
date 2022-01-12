@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/bar-values",
+      "handler": "bar-value.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/bar-values/count",
+      "handler": "bar-value.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/bar-values/:id",
+      "handler": "bar-value.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/bar-values",
+      "handler": "bar-value.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/bar-values/:id",
+      "handler": "bar-value.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/bar-values/:id",
+      "handler": "bar-value.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

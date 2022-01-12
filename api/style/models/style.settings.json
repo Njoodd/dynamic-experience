@@ -132,6 +132,43 @@
         }
       },
       "type": "float"
+    },
+    "borderWidth": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "float"
+    },
+    "borderRadius": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "float"
+    },
+    "borderColor": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "string"
+    },
+    "fontFamily": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "enumeration",
+      "enum": [
+        "scandia",
+        "simplon",
+        "roboto"
+      ]
     }
   }
 }

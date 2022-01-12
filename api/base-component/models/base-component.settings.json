@@ -52,7 +52,6 @@
     },
     "text": {
       "type": "string",
-      "default": "null",
       "pluginOptions": {
         "i18n": {
           "localized": true
@@ -104,7 +103,6 @@
     },
     "onChange": {
       "type": "string",
-      "default": "null",
       "pluginOptions": {
         "i18n": {
           "localized": true
@@ -133,7 +131,8 @@
         "text",
         "password",
         "email",
-        "number"
+        "number",
+        "address"
       ],
       "default": "text",
       "pluginOptions": {
@@ -144,7 +143,6 @@
     },
     "validation": {
       "type": "string",
-      "default": "null",
       "pluginOptions": {
         "i18n": {
           "localized": true
@@ -153,7 +151,6 @@
     },
     "validationError": {
       "type": "string",
-      "default": "null",
       "pluginOptions": {
         "i18n": {
           "localized": true
@@ -162,7 +159,6 @@
     },
     "alt": {
       "type": "string",
-      "default": "null",
       "pluginOptions": {
         "i18n": {
           "localized": true
@@ -182,18 +178,27 @@
         "phone",
         "help",
         "email",
+        "sim",
+        "esim",
+        "physicalSim",
+        "number",
+        "newNumber",
+        "keepNumber",
+        "id",
+        "diamond",
+        "location",
+        "maximise",
         "null"
       ],
-      "default": "null",
       "pluginOptions": {
         "i18n": {
           "localized": true
         }
-      }
+      },
+      "default": "null"
     },
     "url": {
       "type": "string",
-      "default": "null",
       "pluginOptions": {
         "i18n": {
           "localized": true
@@ -283,7 +288,6 @@
     },
     "value1": {
       "type": "string",
-      "default": "null",
       "pluginOptions": {
         "i18n": {
           "localized": true
@@ -292,7 +296,6 @@
     },
     "value2": {
       "type": "string",
-      "default": "null",
       "pluginOptions": {
         "i18n": {
           "localized": true
@@ -301,7 +304,6 @@
     },
     "conditionType": {
       "type": "string",
-      "default": "null",
       "pluginOptions": {
         "i18n": {
           "localized": true
@@ -316,7 +318,6 @@
     },
     "searchVariableId": {
       "type": "string",
-      "default": "null",
       "pluginOptions": {
         "i18n": {
           "localized": true
@@ -343,7 +344,6 @@
     },
     "breakLine": {
       "type": "string",
-      "default": "null",
       "pluginOptions": {
         "i18n": {
           "localized": true
@@ -433,11 +433,14 @@
         "Label",
         "Hyperlink",
         "Button",
+        "Submit",
+        "ProgressBar",
         "TextInput",
         "SwitchInput",
         "Image",
         "WebView",
         "Space",
+        "Form",
         "Card",
         "Container",
         "Grid",
@@ -445,8 +448,85 @@
         "ExpandableList",
         "HorizontalList",
         "VerticalList",
-        "ProductsList"
+        "ProductsList",
+        "Checkbox",
+        "Map"
       ]
+    },
+    "maxValue": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "integer"
+    },
+    "values": {
+      "collection": "bar-value"
+    },
+    "counterEnabled": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "boolean",
+      "default": true
+    },
+    "isChecked": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "boolean",
+      "default": false
+    },
+    "required": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "boolean",
+      "default": false
+    },
+    "defaultLatitude": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "float"
+    },
+    "defaultLongitude": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "float"
+    },
+    "locationSelector": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "boolean",
+      "default": false
+    },
+    "enableMapZoom": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "boolean",
+      "default": true
+    },
+    "onLocationChange": {
+      "collection": "action"
     }
   }
 }
