@@ -32,6 +32,10 @@
     },
     "body": {
       "type": "json"
+    },
+    "API_Name": {
+      "type": "string",
+      "private": true
     }
   }
 }

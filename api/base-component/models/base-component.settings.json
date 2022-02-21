@@ -168,9 +168,10 @@
     "drawable": {
       "type": "enumeration",
       "enum": [
-        "rightArrow",
         "frontArrow",
         "backArrow",
+        "frontChevron",
+        "backChevron",
         "fastShipping",
         "lighting",
         "rollOver",
@@ -449,7 +450,7 @@
         "HorizontalList",
         "VerticalList",
         "ProductsList",
-        "Checkbox",
+        "CheckBox",
         "Map"
       ]
     },
@@ -527,6 +528,22 @@
     },
     "onLocationChange": {
       "collection": "action"
+    },
+    "filterBy": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "string"
+    },
+    "sortBy": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "string"
     }
   }
 }

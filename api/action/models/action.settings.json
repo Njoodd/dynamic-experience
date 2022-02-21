@@ -57,7 +57,7 @@
           "localized": true
         }
       },
-      "type": "string"
+      "type": "text"
     },
     "authorization": {
       "model": "authorization"
@@ -173,7 +173,8 @@
         "ApiCall",
         "Alert",
         "Language",
-        "Condition"
+        "Condition",
+        "DismissAlert"
       ],
       "required": true
     },
@@ -196,7 +197,10 @@
       "enum": [
         "GET",
         "POST",
-        "FORM"
+        "FORM",
+        "PUT",
+        "PATCH",
+        "DELETE"
       ],
       "default": "GET"
     }

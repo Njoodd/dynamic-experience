@@ -54,6 +54,15 @@
           "localized": true
         }
       }
+    },
+    "applicationName": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      },
+      "type": "string",
+      "private": true
     }
   }
 }
